@@ -1,0 +1,14 @@
+[MASTER]
+ignore=.git,.github,.idea,__pycache__,.env,venv,.venv,env,pytest.ini,Dockerfile,docker-compose.yml,alembic, env.py
+
+[MESSAGES CONTROL]
+enable=useless-suppression
+disable=missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        too-few-public-methods,
+        broad-exception-caught,
+        import-error,
+
+[FORMAT]
+max-line-length=120

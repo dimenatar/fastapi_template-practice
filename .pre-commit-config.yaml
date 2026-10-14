@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: debug-statements
+      - id: trailing-whitespace
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.8
+    hooks:
+      - id: ruff-format
+
+      - id: ruff-check
+        args: [ --fix, --show-files ]
+  - repo: https://github.com/pycqa/pylint
+    rev: v4.0.4
+    hooks:
+      - id: pylint
+        args: [
+          "--rc-file=.pylintrc",
+        ]
+
+  - repo: local
+    hooks:
+      - id: update-requirements-file
+        name: update-requirements-file
+        entry: |
+          pip freeze > requirements.txt
+
+        language: system
+        types: [ python ]
+        always_run: true
+        pass_filenames: false

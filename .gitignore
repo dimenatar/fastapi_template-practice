@@ -1,0 +1,33 @@
+# Python-specific ignores
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+.nox/
+dist/
+build/
+*.egg-info/
+
+# PyCharm-specific ignores
+.idea/
+.idea
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+
+.DS_Store
+Thumbs.db
